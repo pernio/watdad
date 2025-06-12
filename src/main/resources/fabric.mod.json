@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "watdad",
+  "version": "${version}",
+  "name": "Watdad",
+  "description": "Mod toolkit for EMC.",
+  "authors": ["Crushed_Cookie"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/watdad/icon.png",
+  "environment": "client",
+  "custom": {
+    "modmenu": {
+      "update-checker": true,
+      "modmenu.icon": "assets/watdad/icon.png"
+    }
+  },
+  "entrypoints": {
+    "fabric-datagen": [
+      "jinzo.watdad.client.WatdadDataGenerator"
+    ],
+    "client": [
+      "jinzo.watdad.client.WatdadClient"
+    ],
+    "main": [
+      "jinzo.watdad.Watdad"
+    ],
+    "modmenu": [
+      "jinzo.watdad.client.utils.ModMenu"
+    ]
+  },
+  "mixins": [
+    "watdad.mixins.json",
+    {
+      "config": "watdad.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "modmenu": "*",
+    "cloth-config": "*",
+    "fabric-key-binding-api-v1": "*"
+  }
+}
