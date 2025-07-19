@@ -4,7 +4,6 @@
   "text.autoconfig.watdad.option.oreRenderRange": "Distance when ore highlights render",
   "text.autoconfig.watdad.option.exposeOres": "Highlight unexposed ores",
   "text.autoconfig.watdad.option.displayHighlightBlock": "Highlight block for coreprotect inspect",
-  "text.autoconfig.watdad.option.displayStaffSession": "Display staff session indicator",
   "key.categories.watdad": "Watdad",
   "key.watdad.holdReveal": "Hold to Reveal"
 }

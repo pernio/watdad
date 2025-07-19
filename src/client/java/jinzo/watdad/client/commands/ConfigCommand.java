@@ -82,25 +82,6 @@ public class ConfigCommand {
                             sendSuccess(ctx.getSource(), "Inspect highlighting disabled");
                             return 1;
                         }))
-                ).then(literal("staffsession")
-                        .executes(ctx -> {
-                            config.displayStaffSession = !getConfig().displayStaffSession;
-                            saveConfig();
-                            sendSuccess(ctx.getSource(), "Staffsession indicator " + (getConfig().displayHighlightBlock ? "enabled" : "disabled"));
-                            return 1;
-                        })
-                        .then(literal("on").executes(ctx -> {
-                            config.displayStaffSession = true;
-                            saveConfig();
-                            sendSuccess(ctx.getSource(), "Staffsession indicator enabled");
-                            return 1;
-                        }))
-                        .then(literal("off").executes(ctx -> {
-                            config.displayStaffSession = false;
-                            saveConfig();
-                            sendSuccess(ctx.getSource(), "Staffsession indicator disabled");
-                            return 1;
-                        }))
                 ).build();
     }
 }
