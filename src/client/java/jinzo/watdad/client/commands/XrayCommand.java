@@ -41,7 +41,7 @@ public class XrayCommand {
     public static void executeCommand(String oreType) {
         MinecraftClient client = MinecraftClient.getInstance();
         if (client.player != null && client.getNetworkHandler() != null) {
-            client.player.networkHandler.sendCommand("co l a:-block i:" + oreType + " t:1h");
+            client.getNetworkHandler().sendChatCommand("co l a:-block i:" + oreType + " t:1h");
         } else {
             System.out.println("[Watdad] Player or network handler not available.");
         }
