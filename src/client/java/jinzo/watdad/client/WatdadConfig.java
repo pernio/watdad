@@ -13,5 +13,4 @@ public class WatdadConfig implements ConfigData {
 
     public boolean exposeOres = false;
     public boolean displayHighlightBlock = false;
-    public boolean displayStaffSession = true;
 }
