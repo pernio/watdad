@@ -17,7 +17,7 @@ You were probably thinking: damn, what if `diamond_ore` had a different color or
 
 ### How to do it
 
-In the mod menu, there is a button to open up `blocks.yml`. This will lead you to a yaml file where you can define blocks and a hex colors.
+In the mod menu, there is a button to open up `blocks.yml`. This will lead you to a yaml file where you can define blocks and a hex color.
 
 ![img.png](.github/images/modmenu.png)
 
@@ -25,7 +25,7 @@ You can list any block, as long as it exists.\
 
 **Tip:** You don't need to rejoin or restart the game to apply changes to the custom blocks.
 
-**WARNING: I do not recommend listing a common block, like stone, deepslate, dirt, ... as this can cause a big fps drop or lag or even crash your game.**
+**WARNING: I do not recommend listing a common block, like stone, deepslate, dirt, ... as this can cause a big fps drop, lag or even crash your game.**
 
 ![img.png](.github/images/custom-blocks.png)
 
@@ -43,7 +43,7 @@ Targets versions: `v1.21.4`-`v1.21.8`
 
 - Added `/xray`.
 
-### v1.1.0 Moderation addon
+### v1.2.0 Rework mod
 
 Targets versions: `v1.21.9`-`v1.21.11`
 
