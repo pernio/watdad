@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "watdad",
+  "version": "${version}",
+  "name": "Watdad",
+  "description": "Ultimate tool to catch xrayers by using legal xray.",
+  "authors": ["Crushed_Cookie"],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/watdad",
+    "sources": "https://github.com/pernio/watdad",
+    "issues": "https://github.com/pernio/watdad/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/watdad/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "app.netlify.jinzo.watdad.client.WatdadDataGenerator"
+    ],
+    "client": [
+      "app.netlify.jinzo.watdad.client.WatdadClient"
+    ],
+    "modmenu": [
+      "app.netlify.jinzo.watdad.client.compat.WatdadModMenu"
+    ],
+    "main": [
+      "app.netlify.jinzo.watdad.Watdad"
+    ]
+  },
+  "mixins": [
+    "watdad.mixins.json",
+    {
+      "config": "watdad.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${supported_minecraft_versions}"
+  }
+}
