@@ -31,7 +31,7 @@ repositories {
     mavenCentral()
     maven {
         name = "Terraformers"
-        url = "https://maven.terraformersmc.com/"
+        url = "https://maven.terraformersmc.com/releases/"
     }
 }
 
