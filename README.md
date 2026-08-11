@@ -54,3 +54,17 @@ Targets versions: `v1.21.9`-`v1.21.11`
 - Removed CoreProtect highlighter.
 - Gave the mod menu a new look.
 - Reworked the backend code.
+
+## Builds
+
+### 26.1.2 and below
+
+```shell
+.\gradlew.bat clean build
+```
+
+### 26.2
+
+```shell
+.\gradlew.bat clean build '-Pminecraft_version=26.2' '-Pfabric_api_version=0.155.2+26.2' '-Psupported_minecraft_versions_override=>=26.2 <26.3'
+```
