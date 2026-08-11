@@ -4,7 +4,7 @@ import app.netlify.jinzo.watdad.client.commands.XrayCommand;
 import app.netlify.jinzo.watdad.client.config.OreOutlineConfigManager;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
-import net.fabricmc.fabric.api.client.rendering.v1.world.WorldRenderEvents;
+import net.fabricmc.fabric.api.client.rendering.v1.level.LevelRenderEvents;
 
 public class WatdadClient implements ClientModInitializer {
     private static final OreOutlineRenderer ORE_OUTLINE_RENDERER = new OreOutlineRenderer();
@@ -17,7 +17,7 @@ public class WatdadClient implements ClientModInitializer {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) ->
                 dispatcher.register(XrayCommand.register())
         );
-        WorldRenderEvents.BEFORE_DEBUG_RENDER.register(ORE_OUTLINE_RENDERER::render);
+        LevelRenderEvents.BEFORE_GIZMOS.register(ORE_OUTLINE_RENDERER::render);
     }
 
     public static OreOutlineConfigManager getConfigManager() {

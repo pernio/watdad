@@ -1,9 +1,9 @@
 package app.netlify.jinzo.watdad.client.config;
 
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.block.Block;
-import net.minecraft.registry.Registries;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.block.Block;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.yaml.snakeyaml.DumperOptions;
@@ -149,13 +149,13 @@ public final class OreOutlineConfigManager {
                 }
 
                 Identifier identifier = parseBlockIdentifier(key);
-                if (identifier == null || !Registries.BLOCK.containsId(identifier)) {
+                if (identifier == null || !BuiltInRegistries.BLOCK.containsKey(identifier)) {
                     LOGGER.warn("Skipping unknown ore key '{}'", key);
                     continue;
                 }
 
                 try {
-                    ores.put(Registries.BLOCK.get(identifier), parseColor(value));
+                    ores.put(BuiltInRegistries.BLOCK.getValue(identifier), parseColor(value));
                 } catch (IllegalArgumentException exception) {
                     LOGGER.warn("Skipping invalid color '{}' for '{}'", value, key);
                 }
